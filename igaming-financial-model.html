@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iGaming Financial Model — GGR to EBITDA Modelling | BulletApex</title>
+<meta name="description" content="Build an investor-ready iGaming financial model. GGR to EBITDA, player LTV cohorts, bonus economics, 3-year P&L. Independent advisory for casino operators.">
+<link rel="canonical" href="https://bulletapex.com/igaming-financial-model.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bulletapex.com/igaming-financial-model.html">
+<meta property="og:title" content="iGaming Financial Model — GGR to EBITDA Modelling | BulletApex">
+<meta property="og:description" content="Build an investor-ready iGaming financial model. GGR to EBITDA, player LTV cohorts, bonus economics, 3-year P&L.">
+<meta property="og:image" content="https://bulletapex.com/og-image.jpg">
+<meta property="og:site_name" content="BulletApex">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "iGaming Financial Model: From GGR to Defensible EBITDA",
+  "description": "Complete financial modeling guide for iGaming and online casino businesses",
+  "author": {"@type": "Organization", "name": "BulletApex"},
+  "publisher": {"@type": "Organization", "name": "BulletApex"},
+  "datePublished": "2026-04-11"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0C1B2A;--navy-2:#152234;--gold:#B5924C;--gold-l:#D4AF70;--warm:#F5F0E8;--stone:#E2DDD4;--graphite:#4A5568;--slate:#718096;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',-apple-system,sans-serif}
+body{font-family:var(--sans);font-size:16px;line-height:1.7;color:var(--navy);background:var(--warm)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+/* NAV */
+.sp-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:rgba(245,240,232,.97);border-bottom:1px solid var(--stone);backdrop-filter:blur(12px)}
+.sp-logo{display:flex;flex-direction:column;gap:2px}
+.sp-logo-name{font:500 18px/1 var(--serif);letter-spacing:.04em;color:var(--navy)}
+.sp-logo-sub{font:400 8px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.sp-nav-links{display:flex;align-items:center;gap:28px}
+.sp-nav-link{font:400 11px/1 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--graphite);transition:color .2s}
+.sp-nav-link:hover{color:var(--gold)}
+.sp-nav-cta{font:400 11px/1 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--navy);border:1px solid rgba(12,27,42,.25);padding:10px 20px;transition:all .2s}
+.sp-nav-cta:hover{border-color:var(--navy);background:rgba(12,27,42,.06)}
+/* HERO */
+.sp-hero{padding:140px 48px 80px;background:var(--navy);position:relative;overflow:hidden}
+.sp-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(181,146,76,.07) 0%,transparent 70%);pointer-events:none}
+.sp-hero-inner{max-width:860px;margin:0 auto}
+.sp-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.sp-gold-rule{width:28px;height:1px;background:var(--gold);flex-shrink:0}
+.sp-label{font:500 10px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.sp-hero h1{font:300 clamp(36px,5vw,72px)/1.1 var(--serif);color:var(--warm);margin-bottom:20px;letter-spacing:-.01em}
+.sp-hero h1 em{font-style:italic;color:var(--gold-l)}
+.sp-hero-sub{font:300 17px/1.85 var(--sans);color:rgba(216,208,196,.75);max-width:560px;margin-bottom:36px}
+.sp-hero-cta{display:inline-flex;align-items:center;gap:10px;font:500 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:14px 30px;color:var(--navy);background:var(--gold);transition:background .2s;cursor:pointer}
+.sp-hero-cta:hover{background:var(--gold-l)}
+/* CONTENT */
+.sp-content{max-width:860px;margin:0 auto;padding:80px 48px}
+.sp-content h2{font:300 clamp(26px,3vw,42px)/1.2 var(--serif);color:var(--navy);margin:60px 0 16px;letter-spacing:-.01em}
+.sp-content h2:first-child{margin-top:0}
+.sp-content h3{font:400 22px/1.3 var(--serif);color:var(--navy);margin:36px 0 12px}
+.sp-content p{font:300 16px/1.9 var(--sans);color:var(--graphite);margin-bottom:18px}
+.sp-content ul{list-style:none;margin:20px 0 24px}
+.sp-content ul li{font:300 15px/1.8 var(--sans);color:var(--graphite);padding:8px 0 8px 24px;border-bottom:1px solid rgba(181,146,76,.1);position:relative}
+.sp-content ul li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+.sp-gold-box{background:var(--stone);border-left:3px solid var(--gold);padding:28px 32px;margin:36px 0}
+.sp-gold-box p{margin:0;font:300 17px/1.8 var(--serif);color:var(--navy)}
+.sp-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:40px 0;background:var(--stone)}
+.sp-stat{background:var(--warm);padding:28px 24px;text-align:center}
+.sp-stat-num{font:300 48px/1 var(--serif);color:var(--navy);letter-spacing:-.03em;display:block}
+.sp-stat-label{font:400 12px/1.4 var(--sans);color:var(--gold);text-transform:uppercase;letter-spacing:.1em;font-size:10px;margin-top:8px;display:block}
+/* FAQ */
+.sp-faq{background:var(--stone);padding:80px 48px}
+.sp-faq-inner{max-width:860px;margin:0 auto}
+.sp-faq h2{font:300 clamp(26px,3vw,40px)/1.2 var(--serif);color:var(--navy);margin-bottom:48px}
+.sp-faq-item{border-bottom:1px solid rgba(181,146,76,.15);padding:24px 0}
+.sp-faq-q{font:400 18px/1.4 var(--serif);color:var(--navy);margin-bottom:10px}
+.sp-faq-a{font:300 15px/1.8 var(--sans);color:var(--graphite)}
+/* CTA BAND */
+.sp-cta{background:var(--navy-2);padding:80px 48px;text-align:center}
+.sp-cta h2{font:300 clamp(26px,3vw,46px)/1.2 var(--serif);color:var(--warm);margin-bottom:12px}
+.sp-cta h2 em{font-style:italic;color:var(--gold-l)}
+.sp-cta p{font:300 16px/1.7 var(--sans);color:rgba(216,208,196,.7);margin-bottom:32px}
+.sp-cta-btn{display:inline-flex;align-items:center;gap:10px;font:500 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:16px 36px;color:var(--navy);background:var(--gold);transition:background .2s}
+.sp-cta-btn:hover{background:var(--gold-l)}
+/* BREADCRUMB */
+.sp-breadcrumb{padding:100px 48px 0;background:var(--warm)}
+.sp-breadcrumb-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:8px;font:400 11px/1 var(--sans);letter-spacing:.07em;color:var(--slate)}
+.sp-breadcrumb a{color:var(--gold);transition:color .2s}.sp-breadcrumb a:hover{color:var(--navy)}
+/* FOOTER */
+.sp-footer{background:#12131A;padding:48px;text-align:center}
+.sp-footer-name{font:500 20px/1 var(--serif);color:var(--warm);margin-bottom:4px}
+.sp-footer-sub{font:400 8px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.sp-footer-links{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-bottom:24px}
+.sp-footer-link{font:300 12px/1 var(--sans);color:rgba(216,208,196,.5);transition:color .2s}.sp-footer-link:hover{color:var(--gold)}
+.sp-footer-copy{font:300 11px/1 var(--sans);color:rgba(216,208,196,.25)}
+@media(max-width:768px){.sp-nav{padding:16px 24px}.sp-nav-links{display:none}.sp-hero{padding:120px 24px 60px}.sp-content{padding:60px 24px}.sp-faq{padding:60px 24px}.sp-cta{padding:60px 24px}.sp-stats-row{grid-template-columns:1fr}.sp-breadcrumb{padding:80px 24px 0}.sp-footer{padding:40px 24px}}
+</style>
+</head>
+<body>
+<nav class="sp-nav">
+  <a href="https://bulletapex.com/" class="sp-logo">
+    <span class="sp-logo-name">BulletApex</span>
+    <span class="sp-logo-sub">Strategic Finance Advisory</span>
+  </a>
+  <div class="sp-nav-links">
+    <a href="https://bulletapex.com/#services" class="sp-nav-link">Services</a>
+    <a href="https://bulletapex.com/#igaming" class="sp-nav-link">iGaming</a>
+    <a href="https://bulletapex.com/#about" class="sp-nav-link">About</a>
+    <a href="https://bulletapex.com/#contact" class="sp-nav-cta">Confidential Inquiry</a>
+  </div>
+</nav>
+
+<div class="sp-breadcrumb">
+  <div class="sp-breadcrumb-inner">
+    <a href="https://bulletapex.com/">Home</a>
+    <span>/</span>
+    <span>Financial Model</span>
+  </div>
+</div>
+
+<div class="sp-hero">
+  <div class="sp-hero-inner">
+    <div class="sp-eyebrow">
+      <div class="sp-gold-rule"></div>
+      <span class="sp-label">Financial Modeling</span>
+    </div>
+    <h1>iGaming Financial Model: From GGR to <em>Defensible EBITDA</em></h1>
+    <p class="sp-hero-sub">Build an investor-ready financial model for your online casino. Player LTV by cohort, bonus economics, 3-year P&L, margin analysis. The foundation of M&A valuation and investor pitch.</p>
+    <a href="https://bulletapex.com/#contact" class="sp-hero-cta">Build Your Financial Model</a>
+  </div>
+</div>
+
+<div class="sp-content">
+  <h2>Why Most Casino Financial Models Are Wrong</h2>
+  <p>Most casino operators have never built a proper financial model. They run their business in QuickBooks, they know their monthly P&L, they track GGR and NGR. When they need to show investors or buyers "what the business can do," they either:</p>
+  <ul>
+    <li>Show last year's P&L and call it a forecast (lazy and unconvincing)</li>
+    <li>Build a simple Excel model with GGR assumptions and flat margins (misses the critical drivers)</li>
+    <li>Ask their accountant to build one, who builds a generic SaaS template (wrong structure for iGaming)</li>
+  </ul>
+  <p>All three approaches fail under scrutiny. Investors and buyers will tear apart your assumptions, question your margin forecasts, and demand evidence that your model is realistic. A weak model kills your credibility and tanks your valuation.</p>
+  <p>A proper iGaming financial model has to account for:</p>
+  <ul>
+    <li>Player cohort acquisition costs and retention curves (not just aggregate GGR)</li>
+    <li>Bonus economics as a percentage of GGR, not a fixed cost</li>
+    <li>Payment processor fees, which scale with volume</li>
+    <li>Regulatory and compliance costs, which can change by jurisdiction</li>
+    <li>Variable and fixed cost structure (some costs scale, some don't)</li>
+    <li>License and platform dependencies (what changes if you change payment processor or platform?)</li>
+  </ul>
+  <p>Build this model correctly, and you can show investors or buyers exactly how your business generates EBITDA. Build it wrong, and you lose the deal.</p>
+
+  <h2>The iGaming P&L Structure: GGR → NGR → Gross Profit → EBITDA</h2>
+
+  <p><strong>GGR (Gross Gaming Revenue)</strong> is the top line. It's the total amount wagered by players minus the total winnings paid out. If players deposit $1M and the expected RTP is 95%, GGR is approximately $50k.</p>
+
+  <p><strong>Bonus Payouts</strong> come off GGR next. If you offer welcome bonuses, recurring promotions, and VIP reloads, these reduce your true revenue. Bonus as a percentage of GGR varies from 2–15% depending on your strategy. Aggressive bonus-driven operators might be 12–15% GGR; efficient operators might be 3–5%.</p>
+
+  <p><strong>NGR (Net Gaming Revenue) = GGR minus Bonus Payouts (and taxes/regulatory fees in some jurisdictions).</strong> This is your true profit pool. A typical healthy NGR margin is 45–55% of GGR.</p>
+
+  <p><strong>From NGR to Gross Profit, subtract:</strong></p>
+  <ul>
+    <li>Payment processor fees (2–4% of deposits, sometimes more)</li>
+    <li>Affiliate commissions (3–8% of acquisition value)</li>
+    <li>Fraud and chargeback costs (0.5–2% of deposits)</li>
+    <li>Responsible gambling and compliance costs (varies by jurisdiction, typically €20k–€100k+ annually)</li>
+    <li>Customer support labor and outsourcing</li>
+    <li>Hosting, CDN, and platform costs</li>
+  </ul>
+
+  <p><strong>Gross Profit = NGR minus all variable costs.</strong> A healthy Gross Profit margin is 35–50% of NGR.</p>
+
+  <p><strong>From Gross Profit to EBITDA, subtract:</strong></p>
+  <ul>
+    <li>Marketing spend (varies enormously: 10–50% of GGR depending on acquisition strategy)</li>
+    <li>Salaries and headcount</li>
+    <li>Office, travel, professional services</li>
+    <li>Licenses and compliance (varies by jurisdiction)</li>
+  </ul>
+
+  <p><strong>EBITDA = Gross Profit minus operating expenses (before interest, tax, depreciation, amortization).</strong> A healthy EBITDA margin is 20–40% of GGR.</p>
+
+  <p>Most casino operators underestimate the bridge from GGR to EBITDA. They think "my NGR margin is 50%, so I'm profitable," but they're not accounting for payment processing, affiliate commissions, platform costs, and marketing spend. The gap between NGR and EBITDA is where deals often break down.</p>
+
+  <h2>Player LTV Modelling by Cohort</h2>
+
+  <p>Your financial model needs to show player lifetime value (LTV) by acquisition cohort. Here's how:</p>
+
+  <p><strong>Step 1: Segment players by acquisition month/quarter.</strong> For the last 18–24 months, identify all players acquired in Q1 2024, Q2 2024, etc.</p>
+
+  <p><strong>Step 2: Calculate cohort retention curves.</strong> For each cohort, measure what percentage are still active at Day 30, Day 90, Day 180, Day 365. Example: Q1 2024 cohort had 500 players. By Day 30, 125 were still active (25% retention). By Day 90, 45 were still active (9% retention). By Day 365, 20 were still active (4% retention).</p>
+
+  <p><strong>Step 3: Calculate LTV by cohort.</strong> Sum up the total net deposits or net gaming revenue from all players in the cohort over their entire lifespan. Example: Q1 2024 cohort generated €50k total NGR. LTV per player = €50k / 500 = €100.</p>
+
+  <p><strong>Step 4: Calculate CAC and LTV ratio.</strong> If you spent €15k acquiring Q1 2024 cohort, CAC per player = €15k / 500 = €30. LTV:CAC = €100:€30 = 3.3:1 (you made €3.30 per €1 spent).</p>
+
+  <p>Model this for 18+ months of cohorts, and you can see whether your LTV is improving, stable, or degrading. Degrading LTV (each new cohort has lower LTV than previous) is a massive red flag for buyers. Improving LTV is a valuation booster.</p>
+
+  <p>Once you have historical LTV by cohort, you can forecast forward: if you acquire 10k players per month in Year 1, expect similar retention curves to historical cohorts, and project resulting NGR and EBITDA.</p>
+
+  <h2>Bonus Economics: The Hidden P&L Killer</h2>
+
+  <p>Bonus is the single biggest variable cost in iGaming. It's also the most commonly mispriced in financial models.</p>
+
+  <p>Most operators model bonus as a fixed percentage of GGR. Example: "Assume 8% of GGR goes to bonuses." This is dangerous. Why? Because as you grow GGR, bonus doesn't scale linearly. Here's why:</p>
+
+  <ul>
+    <li>Welcome bonuses are per-player, not per-GGR. If you acquire 10k new players in Month 1 and 12k in Month 2, bonus cost as % of GGR might shift from 8% to 7% if your GGR grew faster than acquisitions.</li>
+    <li>Promotional spending is discretionary. You might increase promotions during slow months and cut them during peaks, making bonus volatile.</li>
+    <li>Player mix matters. If you acquire 50% sports bettors and 50% casino players, but sports has higher retention and lower bonus burn, your blended bonus % shifts.</li>
+  </ul>
+
+  <p>In your model, track bonus as a function of new player acquisitions and promotional intensity, not as a simple % of GGR. Example:</p>
+  <ul>
+    <li>Welcome bonus: €20 per new player acquired</li>
+    <li>Recurring promotions: 1% of active player NGR per month</li>
+    <li>VIP bonuses: €X per high-value player</li>
+    <li>Seasonal promotions: €Y per month during peak season</li>
+  </ul>
+
+  <p>Build it this way, and your model is defensible. You can show that as GGR grows, bonus either shrinks as a % of GGR (better) or stays flat (acceptable) or grows (bad, but at least you're transparent about it).</p>
+
+  <h2>3-Year Forecast Structure</h2>
+
+  <p>A proper 3-year model has:</p>
+
+  <p><strong>Year 1 (Detailed):</strong> Monthly P&L. Show GGR, bonus, NGR, all variable costs (payment processing, affiliate, fraud, compliance), gross profit, and EBITDA. This shows seasonality, monthly trends, and cost structure in detail.</p>
+
+  <p><strong>Years 2–3 (Quarterly):</strong> Quarterly P&L. Show how the business scales. GGR assumptions (what % growth?), margin assumptions (does NGR % improve as you scale?), and EBITDA trajectory. Add sensitivity analysis: what if GGR grows 10% vs. 20% vs. 5%? What if margin compresses?</p>
+
+  <p>Your assumptions should be clearly documented:</p>
+  <ul>
+    <li>GGR growth rate by year and rationale</li>
+    <li>Bonus as % of GGR and why</li>
+    <li>Payment processor fees as % of deposits</li>
+    <li>Affiliate commission rate and player mix</li>
+    <li>New headcount assumptions and salary growth</li>
+    <li>Marketing spend intensity (% of GGR or € per new player)</li>
+  </ul>
+
+  <p>Investors and buyers will scrutinize these assumptions. If they're unrealistic (e.g., you assume 50% YoY growth in a declining market, or you assume 65% NGR margin when the industry standard is 50%), they'll discount the model and value your business lower.</p>
+
+  <h2>When You Need a Financial Model</h2>
+
+  <p>A proper financial model is essential if you're:</p>
+  <ul>
+    <li><strong>Raising capital:</strong> Investors need a credible model of how you'll use funds and what returns they can expect. A weak model kills your fundraising.</li>
+    <li><strong>Selling your business:</strong> Buyers will model forward-looking cash flows. If you don't have a model, they'll build their own assumptions (usually conservative). Better to control the narrative with your own model.</li>
+    <li><strong>Planning strategic expansion:</strong> If you're considering new markets, new products, or new acquisition channels, model the financial impact before you commit capital.</li>
+    <li><strong>Managing to a plan:</strong> A detailed financial model lets you track actuals vs. forecast and identify issues early (GGR miss, margin compression, cost overrun).</li>
+  </ul>
+
+  <p>A proper financial model typically takes 4–8 weeks and includes: historical P&L analysis, cohort retention analysis, cost structure review, and a detailed 3-year P&L with sensitivity analysis. The output is a defendable forecast that you can use with investors or buyers.</p>
+
+  <div class="sp-gold-box">
+    <p><strong>Your model is only as good as your underlying data.</strong> If you can't produce clean player cohort data, reliable payment processor fee schedules, and accurate marketing spend by channel, your model will be weak. Spend time on the data foundation before you build the forecast.</p>
+  </div>
+
+  <div class="sp-stats-row">
+    <div class="sp-stat">
+      <span class="sp-stat-num">4–8 wks</span>
+      <span class="sp-stat-label">Model Build Time</span>
+    </div>
+    <div class="sp-stat">
+      <span class="sp-stat-num">15–25%</span>
+      <span class="sp-stat-label">Avg GGR to EBITDA Gap</span>
+    </div>
+    <div class="sp-stat">
+      <span class="sp-stat-num">18–24 mo</span>
+      <span class="sp-stat-label">Historical Data Needed</span>
+    </div>
+  </div>
+
+  <h2>Building Your Model: Key Principles</h2>
+  <p>A defensible financial model is built on these principles:</p>
+  <p><strong>Transparency:</strong> Every assumption should be clearly stated and justified. If you assume 10% GGR growth, explain why — market research, historical trend, new channel launch, etc.</p>
+  <p><strong>Conservatism:</strong> Slightly underestimate revenue and overestimate costs. If you forecast too aggressively and miss, your credibility tanks. Better to beat a conservative forecast.</p>
+  <p><strong>Sensitivity:</strong> Show downside scenarios. What if GGR only grows 5%? What if margin compresses 5%? Buyers and investors want to know you've thought about risks, not just the happy path.</p>
+  <p><strong>Data-Driven:</strong> Every assumption should be grounded in historical data, not guesswork. If you don't have 18+ months of cohort data, spend time building that first.</p>
+  <p>A <a href="https://bulletapex.com/casino-profitability-review.html">profitability review</a> can help you understand your cost structure and margin drivers before you model forward. This removes blind spots and makes your model stronger.</p>
+
+</div>
+
+<div class="sp-faq">
+  <div class="sp-faq-inner">
+    <h2>Common Questions About iGaming Financial Models</h2>
+
+    <div class="sp-faq-item">
+      <div class="sp-faq-q">How detailed should a financial model be for M&A?</div>
+      <div class="sp-faq-a">For M&A, model at least 2 years in detail (monthly Year 1, quarterly Year 2), then annual Years 3–5 at high level. Show all assumptions clearly. Buyers want to validate your model against their own assumptions, so transparency matters more than complexity. A simple model with clear assumptions is better than a complex model with hidden or unrealistic assumptions.</div>
+    </div>
+
+    <div class="sp-faq-item">
+      <div class="sp-faq-q">What's the difference between a forecast and a budget?</div>
+      <div class="sp-faq-a">A forecast is your best estimate of future performance based on current trajectory and assumptions. A budget is a target you're trying to hit. For investors and buyers, a forecast is more credible — it shows you're being realistic. Budgets often contain aspirational elements that don't reflect actual capacity.</div>
+    </div>
+
+    <div class="sp-faq-item">
+      <div class="sp-faq-q">How do I model the impact of a new marketing channel?</div>
+      <div class="sp-faq-a">Model it separately: calculate CAC for the new channel, expected retention (assume worse than current average until you have 12 months of data), LTV, and payback period. Show impact on GGR, on marketing spend %, and on overall unit economics. If the new channel has high CAC and low LTV, it won't improve EBITDA — model accordingly.</div>
+    </div>
+
+    <div class="sp-faq-item">
+      <div class="sp-faq-q">What if my bonus spend is unpredictable?</div>
+      <div class="sp-faq-a">Model it conservatively. If you have high bonus volatility, use a percentage of GGR assumption that's on the high end of your recent experience, or model bonus as a mix of fixed (player bonuses) and variable (promotional spend). Show ranges in sensitivity analysis. Conservative bonus assumptions are better than wishful ones.</div>
+    </div>
+
+    <div class="sp-faq-item">
+      <div class="sp-faq-q">How do I account for regulatory changes in the forecast?</div>
+      <div class="sp-faq-a">Model a scenario where a key regulatory change occurs (higher taxes, stricter bonus rules, license fees increase). Show the impact on EBITDA. If a jurisdiction represents 40% of GGR and you model a 10% tax increase, EBITDA drops 4%. Buyers want to see you've thought about regulatory risk, not just best-case scenarios.</div>
+    </div>
+  </div>
+</div>
+
+<div class="sp-cta">
+  <h2>Build a Model That Works. <em>And Stands Up to Scrutiny.</em></h2>
+  <p>We build financial models for casino operators that survive investor and buyer scrutiny. Player cohort analysis, bonus economics, multi-scenario forecasting, and documented assumptions. A proper model is your foundation for fundraising and M&A.</p>
+  <a href="https://bulletapex.com/#contact" class="sp-cta-btn">Build Your Financial Model</a>
+</div>
+
+<footer class="sp-footer">
+  <div class="sp-footer-name">BulletApex</div>
+  <div class="sp-footer-sub">Clarity Without Mercy</div>
+  <div class="sp-footer-links">
+    <a href="https://bulletapex.com/" class="sp-footer-link">Home</a>
+    <a href="https://bulletapex.com/sell-casino.html" class="sp-footer-link">Sell Casino</a>
+    <a href="https://bulletapex.com/igaming-valuation.html" class="sp-footer-link">Valuation</a>
+    <a href="https://bulletapex.com/casino-profitability-review.html" class="sp-footer-link">Profitability Review</a>
+    <a href="https://bulletapex.com/igaming-ma-advisor.html" class="sp-footer-link">M&A Advisory</a>
+    <a href="https://bulletapex.com/#contact" class="sp-footer-link">Contact</a>
+    <a href="mailto:contact@bulletapex.com" class="sp-footer-link">contact@bulletapex.com</a>
+  </div>
+  <p class="sp-footer-copy">© 2026 BulletApex. All rights reserved. All client relationships are strictly confidential.</p>
+</footer>
+</body>
+</html>
