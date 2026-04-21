@@ -1,0 +1,10 @@
+# Redirect missing pages to home
+/igaming-valuation.html /insights 301
+/sell-casino.html /insights 301
+/igaming-financial-model.html /insights 301
+/igaming-ma-advisor.html /insights 301
+/igaming-ma-checklist.html /insights 301
+/casino-profitability-review.html /insights 301
+
+# Handle SPA routing
+/* /index.html 200
