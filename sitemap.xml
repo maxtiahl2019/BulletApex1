@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>https://bulletapex.com/</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Money Pages — Week 2 -->
+  <!-- Articles & Content Pages -->
   <url>
-    <loc>https://bulletapex.com/sell-casino.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://bulletapex.com/igaming-valuation.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://bulletapex.com/igaming-ma-advisor.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://bulletapex.com/igaming-financial-model.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://bulletapex.com/casino-profitability-review.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://bulletapex.com/igaming-ma-checklist.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Main site sections -->
-  <url>
-    <loc>https://bulletapex.com/#services</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://bulletapex.com/#igaming</loc>
-    <lastmod>2026-04-11</lastmod>
+    <loc>https://bulletapex.com/#articles</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.95</priority>
   </url>
 
+  <!-- Article 1: LTV Optimization -->
+  <url>
+    <loc>https://bulletapex.com/#article-ltv-optimization</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 2: GGR Benchmarks -->
+  <url>
+    <loc>https://bulletapex.com/#article-ggr-benchmarks</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 3: Player Retention -->
+  <url>
+    <loc>https://bulletapex.com/#article-retention</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 4: Paywall Design -->
+  <url>
+    <loc>https://bulletapex.com/#article-paywall</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 5: Welcome Package ROI -->
+  <url>
+    <loc>https://bulletapex.com/#article-welcome</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article 6: Day 0 Retention -->
+  <url>
+    <loc>https://bulletapex.com/#article-day0</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Info Pages -->
   <url>
     <loc>https://bulletapex.com/#about</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://bulletapex.com/#contact</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
