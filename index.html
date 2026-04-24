@@ -1020,6 +1020,183 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
     </div>
   </section>
 
+  <!-- AI DIAGNOSTIC SECTION ON HOMEPAGE -->
+  <section style="padding:100px 0;background:var(--navy)">
+    <div class="wrap" style="max-width:700px">
+      <div style="text-align:center;margin-bottom:56px" class="reveal">
+        <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:16px">
+          <span class="gold-rule" style="flex-shrink:0"></span>
+          <span class="label" style="color:var(--gold)">Quick Diagnostic</span>
+          <span class="gold-rule" style="flex-shrink:0"></span>
+        </div>
+        <h2 style="font-size:clamp(28px,3.5vw,48px);color:var(--warm);margin-bottom:12px;font-weight:300;letter-spacing:-.01em">Where are you wasting time & money?</h2>
+        <p style="color:rgba(245,240,232,.6);font-size:16px">3 questions. 2 minutes. See exactly where AI automation can save you.</p>
+      </div>
+
+      <form id="aiDiagnosticFormHome" style="background:rgba(181,146,76,.05);padding:40px;border-radius:8px;border:1px solid rgba(181,146,76,.2)">
+
+        <!-- Q1: Time Wasters -->
+        <div style="margin-bottom:40px">
+          <label style="display:block;font-size:16px;font-weight:600;color:var(--warm);margin-bottom:16px">What wastes your time? (Pick all that apply)</label>
+          <div style="display:grid;grid-template-columns:1fr;gap:12px">
+            <label style="display:flex;align-items:center;gap:10px;padding:14px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="process" value="leads" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">📞 Chasing leads & following up</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:14px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="process" value="customer-questions" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">💬 Answering the same customer questions</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:14px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="process" value="quotes-proposals" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">📄 Writing quotes & proposals</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:14px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="process" value="invoicing" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">📋 Invoicing & payment tracking</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:14px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="process" value="data-entry" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">⌨️ Data entry & spreadsheet updates</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:14px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="process" value="scheduling" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">📅 Scheduling & calendar management</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q2: Hours Per Week -->
+        <div style="margin-bottom:40px">
+          <label style="display:block;font-size:16px;font-weight:600;color:var(--warm);margin-bottom:16px">How many hours per week on these tasks?</label>
+          <input type="range" name="hours" min="5" max="100" value="40" style="width:100%;height:6px;border-radius:3px;background:rgba(181,146,76,.3);outline:none;-webkit-appearance:none">
+          <div style="display:flex;justify-content:space-between;margin-top:12px;color:rgba(245,240,232,.6)">
+            <span>5h</span>
+            <span id="hoursDisplayHome" style="color:#d4af37;font-weight:600;font-size:18px">40h</span>
+            <span>100h</span>
+          </div>
+        </div>
+
+        <!-- Q3: Average Cost -->
+        <div style="margin-bottom:40px">
+          <label style="display:block;font-size:16px;font-weight:600;color:var(--warm);margin-bottom:16px">Your hourly cost (salary / 2080)?</label>
+          <div style="display:flex;gap:12px;align-items:center">
+            <span style="color:var(--warm);font-size:20px;font-weight:600">$</span>
+            <input type="number" name="hourlyRate" value="50" min="10" max="500" style="flex:1;padding:12px;border:1px solid rgba(181,146,76,.2);background:rgba(12,27,42,.8);color:var(--warm);border-radius:4px;font-size:16px;font-weight:600">
+            <span style="color:rgba(245,240,232,.6)">/ hour</span>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-arrow" style="width:100%;padding:16px;font-size:16px">Get My Diagnostic Results →</button>
+      </form>
+
+      <!-- RESULTS SECTION (Hidden until form submitted) -->
+      <div id="resultsHomeDiagnostic" style="display:none;margin-top:60px">
+        <div style="background:linear-gradient(135deg,rgba(181,146,76,.12) 0%,rgba(181,146,76,.05) 100%);border:2px solid #d4af37;padding:48px;border-radius:8px">
+          <h2 style="color:#d4af37;font-size:32px;margin-bottom:4px;font-weight:700">Your Automation Opportunity</h2>
+          <p style="color:rgba(245,240,232,.5);margin-bottom:40px;font-size:14px">You're currently leaving money on the table.</p>
+
+          <!-- ANNUAL COST CARD (Big, Prominent) -->
+          <div style="background:rgba(12,27,42,.8);padding:32px;border-radius:6px;margin-bottom:28px;border-left:4px solid #d4af37">
+            <p style="color:rgba(245,240,232,.5);margin-bottom:12px;font-size:13px;letter-spacing:.08em;text-transform:uppercase">Annual Spend on Manual Processes</p>
+            <p style="font-size:48px;font-weight:700;color:#d4af37;margin-bottom:4px" id="annualCostHome">$104,000</p>
+            <p style="color:rgba(245,240,232,.4);font-size:12px"><span id="annualHoursHome">2,080</span>h of your time tied up</p>
+          </div>
+
+          <!-- WHAT GETS AUTOMATED -->
+          <h3 style="color:var(--warm);margin-bottom:16px;font-size:18px;font-weight:600">These processes can be automated:</h3>
+          <div id="recommendationsContainerHome" style="display:grid;gap:10px;margin-bottom:32px"></div>
+
+          <!-- POTENTIAL SAVINGS (Large, Prominent) -->
+          <div style="background:rgba(181,146,76,.15);padding:36px;border-radius:6px;border:2px solid #d4af37;margin-bottom:32px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center">
+              <div>
+                <p style="color:rgba(245,240,232,.5);margin-bottom:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Year 1 Savings</p>
+                <p style="font-size:44px;font-weight:700;color:#d4af37" id="potentialSavingsHome">$52,000</p>
+                <p style="color:rgba(245,240,232,.4);font-size:12px;margin-top:8px">50% of manual time eliminated</p>
+              </div>
+              <div style="border-left:1px solid rgba(181,146,76,.3);padding-left:24px">
+                <p style="color:rgba(245,240,232,.5);margin-bottom:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Payback Time</p>
+                <p style="font-size:44px;font-weight:700;color:var(--warm)" id="paybackMonthsHome">1.8</p>
+                <p style="color:rgba(245,240,232,.4);font-size:12px;margin-top:8px">months to recover investment</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FINAL CTA (Strong, Clear) -->
+          <div style="margin-top:48px;text-align:center">
+            <button class="btn btn-primary btn-arrow" onclick="showPage('contact')" style="padding:18px 50px;font-size:17px;margin-bottom:16px;width:100%;">Let's Talk About Automation</button>
+            <p style="color:rgba(245,240,232,.4);font-size:12px">No obligation. Just a conversation about what's possible.</p>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const formHome = document.getElementById('aiDiagnosticFormHome');
+        const hoursInputHome = formHome.querySelector('input[name="hours"]');
+        const hoursDisplayHome = document.getElementById('hoursDisplayHome');
+
+        // Update hours display
+        hoursInputHome.addEventListener('input', (e) => {
+          hoursDisplayHome.textContent = e.target.value + 'h';
+        });
+
+        // Form submission
+        formHome.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const hours = parseInt(hoursInputHome.value);
+          const hourlyRate = parseInt(formHome.querySelector('input[name="hourlyRate"]').value);
+          const annualHours = hours * 52;
+          const annualCost = annualHours * hourlyRate;
+
+          // Conservative: 50% automation
+          const automationRate = 0.5;
+          const potentialSavings = Math.round(annualCost * automationRate);
+
+          // Investment estimate: $80K
+          const investmentRequired = 80000;
+          const paybackMonths = ((investmentRequired / potentialSavings) * 12).toFixed(1);
+
+          // Update results
+          document.getElementById('annualHoursHome').textContent = annualHours.toLocaleString();
+          document.getElementById('annualCostHome').textContent = '$' + annualCost.toLocaleString();
+          document.getElementById('potentialSavingsHome').textContent = '$' + potentialSavings.toLocaleString();
+          document.getElementById('paybackMonthsHome').textContent = paybackMonths;
+
+          // Build recommendations
+          const processMap = {
+            'leads': { title: '📞 Lead Follow-up Automation', desc: 'AI sends personalized follow-ups, tracks engagement, prioritizes hot leads' },
+            'customer-questions': { title: '💬 24/7 Customer Support Bot', desc: 'Answer common questions instantly, collect info, route to you' },
+            'quotes-proposals': { title: '📄 Auto Quote Generator', desc: 'Create professional quotes in 2 minutes instead of 30' },
+            'invoicing': { title: '📋 Invoice Automation', desc: 'Create, send, track payments automatically' },
+            'data-entry': { title: '⌨️ Smart Data Entry', desc: 'Read documents, fill spreadsheets, update CRM — no manual typing' },
+            'scheduling': { title: '📅 Automatic Scheduling', desc: 'AI handles calendar, sends confirmations, reschedules' }
+          };
+
+          const selectedProcesses = Array.from(formHome.querySelectorAll('input[name="process"]:checked')).map(cb => cb.value);
+          const recommendations = selectedProcesses.map(p => {
+            const proc = processMap[p];
+            return `<div style="padding:16px;background:rgba(181,146,76,.08);border-radius:4px;border-left:3px solid #d4af37">
+              <p style="color:var(--warm);font-weight:600;margin-bottom:4px;font-size:15px">${proc.title}</p>
+              <p style="color:rgba(245,240,232,.6);font-size:13px;line-height:1.6">${proc.desc}</p>
+            </div>`;
+          }).join('');
+
+          document.getElementById('recommendationsContainerHome').innerHTML = recommendations || '<p style="color:rgba(245,240,232,.6);font-size:14px">Select at least one task above to see what can be automated</p>';
+
+          // Show results
+          formHome.style.display = 'none';
+          document.getElementById('resultsHomeDiagnostic').style.display = 'block';
+
+          // Scroll to results
+          document.getElementById('resultsHomeDiagnostic').scrollIntoView({ behavior: 'smooth' });
+        });
+      </script>
+    </div>
+  </section>
+
   <section class="service-cards-section">
     <div class="wrap">
       <div class="section-header">
