@@ -2806,6 +2806,369 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   <footer><div class="footer-inner"><div><div class="foot-name">BulletApex</div><div class="foot-sub">Clarity Without Mercy</div></div><div class="foot-col"><h5>Advisory</h5><a onclick="showPage('ai-automation')">AI Process Automation</a><a onclick="showPage('contact')">Start Free Assessment</a></div></div><div class="footer-bottom"><span class="foot-copy">© 2026 BulletApex.</span></div></footer>
 </div>
 
+<!-- ══════════ AI DIAGNOSTIC QUIZ ══════════ -->
+<div class="page" id="page-ai-diagnostic">
+  <div class="page-hero" style="padding:80px 0">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow"><span class="gold-rule"></span><span class="label label--dim">AI Automation Diagnostic</span></div>
+      <h1 class="page-title">Find Your Hidden Automation Opportunity</h1>
+      <p class="page-sub">Answer 5 quick questions. See which processes are costing you the most. Get personalized recommendations.</p>
+    </div>
+  </div>
+
+  <section style="padding:60px 0;background:var(--navy)">
+    <div class="wrap" style="max-width:700px">
+      <form id="aiDiagnosticForm" style="background:rgba(181,146,76,.05);padding:40px;border-radius:8px;border:1px solid rgba(181,146,76,.2)">
+
+        <!-- Q1: Main Pain Point -->
+        <div style="margin-bottom:40px">
+          <label style="display:block;font-size:16px;font-weight:600;color:var(--warm);margin-bottom:16px">1. What's your biggest operational pain?</label>
+          <div style="display:grid;grid-template-columns:1fr;gap:12px">
+            <label style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer;transition:all .2s">
+              <input type="radio" name="painPoint" value="speed" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">🐢 Too slow — decisions take days</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer;transition:all .2s">
+              <input type="radio" name="painPoint" value="errors" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">❌ Too many errors — manual mistakes cost money</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer;transition:all .2s">
+              <input type="radio" name="painPoint" value="cost" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">💸 Too expensive — too many people on this</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer;transition:all .2s">
+              <input type="radio" name="painPoint" value="all" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">⚠️ All of the above</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q2: Affected Departments (Multi-select) -->
+        <div style="margin-bottom:40px">
+          <label style="display:block;font-size:16px;font-weight:600;color:var(--warm);margin-bottom:16px">2. Which departments have manual processes? (Select all that apply)</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="dept" value="finance" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">💰 Finance</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="dept" value="hr" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">👥 HR</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="dept" value="sales" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">📈 Sales</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="dept" value="support" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">🎧 Customer Support</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="dept" value="ops" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">⚙️ Operations</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid rgba(181,146,76,.2);border-radius:4px;cursor:pointer">
+              <input type="checkbox" name="dept" value="compliance" style="width:18px;height:18px;cursor:pointer">
+              <span style="color:rgba(245,240,232,.8)">📋 Compliance</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q3: Specific Processes (Dynamic based on selected depts) -->
+        <div style="margin-bottom:40px">
+          <label style="display:block;font-size:16px;font-weight:600;color:var(--warm);margin-bottom:16px">3. Which specific processes waste the most time?</label>
+
+          <!-- FINANCE PROCESSES -->
+          <div id="financeProcesses" style="display:none">
+            <div style="margin-bottom:16px;padding:16px;background:rgba(181,146,76,.08);border-radius:4px">
+              <p style="color:#d4af37;font-weight:600;margin-bottom:12px">💰 Finance Processes</p>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="invoices" style="margin-right:8px">
+                Invoice processing & payment
+              </label>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="expenses" style="margin-right:8px">
+                Expense reports & approvals
+              </label>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="reconciliation" style="margin-right:8px">
+                Bank reconciliation
+              </label>
+              <label style="display:block;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="reports" style="margin-right:8px">
+                Financial reports generation
+              </label>
+            </div>
+          </div>
+
+          <!-- HR PROCESSES -->
+          <div id="hrProcesses" style="display:none">
+            <div style="margin-bottom:16px;padding:16px;background:rgba(181,146,76,.08);border-radius:4px">
+              <p style="color:#d4af37;font-weight:600;margin-bottom:12px">👥 HR Processes</p>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="onboarding" style="margin-right:8px">
+                Employee onboarding
+              </label>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="leave" style="margin-right:8px">
+                Leave/PTO requests & approvals
+              </label>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="payroll" style="margin-right:8px">
+                Payroll processing
+              </label>
+              <label style="display:block;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="compliance-hr" style="margin-right:8px">
+                Compliance documentation
+              </label>
+            </div>
+          </div>
+
+          <!-- SALES PROCESSES -->
+          <div id="salesProcesses" style="display:none">
+            <div style="margin-bottom:16px;padding:16px;background:rgba(181,146,76,.08);border-radius:4px">
+              <p style="color:#d4af37;font-weight:600;margin-bottom:12px">📈 Sales Processes</p>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="lead-scoring" style="margin-right:8px">
+                Lead scoring & qualification
+              </label>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="followups" style="margin-right:8px">
+                Follow-up emails & reminders
+              </label>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="proposals" style="margin-right:8px">
+                Proposal generation
+              </label>
+              <label style="display:block;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="deal-tracking" style="margin-right:8px">
+                Pipeline tracking & updates
+              </label>
+            </div>
+          </div>
+
+          <!-- CUSTOMER SUPPORT PROCESSES -->
+          <div id="supportProcesses" style="display:none">
+            <div style="margin-bottom:16px;padding:16px;background:rgba(181,146,76,.08);border-radius:4px">
+              <p style="color:#d4af37;font-weight:600;margin-bottom:12px">🎧 Customer Support Processes</p>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="ticket-routing" style="margin-right:8px">
+                Ticket routing & categorization
+              </label>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="faq-responses" style="margin-right:8px">
+                FAQ & repetitive answers
+              </label>
+              <label style="display:block;margin-bottom:8px;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="escalation" style="margin-right:8px">
+                Escalation handling
+              </label>
+              <label style="display:block;color:rgba(245,240,232,.7)">
+                <input type="checkbox" name="process" value="feedback" style="margin-right:8px">
+                Feedback & sentiment analysis
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4: Hours Spent -->
+        <div style="margin-bottom:40px">
+          <label style="display:block;font-size:16px;font-weight:600;color:var(--warm);margin-bottom:16px">4. How many hours per week do these processes consume?</label>
+          <input type="range" name="hours" min="5" max="100" value="40" style="width:100%;height:6px;border-radius:3px;background:rgba(181,146,76,.3);outline:none;-webkit-appearance:none">
+          <div style="display:flex;justify-content:space-between;margin-top:12px;color:rgba(245,240,232,.6)">
+            <span>5h</span>
+            <span id="hoursDisplay" style="color:#d4af37;font-weight:600">40h</span>
+            <span>100h</span>
+          </div>
+        </div>
+
+        <!-- Q5: Average Salary -->
+        <div style="margin-bottom:40px">
+          <label style="display:block;font-size:16px;font-weight:600;color:var(--warm);margin-bottom:16px">5. Average hourly cost (salary/2080h)?</label>
+          <div style="display:flex;gap:12px;align-items:center">
+            <span style="color:var(--warm)">$</span>
+            <input type="number" name="hourlyRate" value="50" min="10" max="200" style="flex:1;padding:12px;border:1px solid rgba(181,146,76,.2);background:rgba(12,27,42,.8);color:var(--warm);border-radius:4px;font-size:16px">
+            <span style="color:rgba(245,240,232,.6)">/hour</span>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-arrow" style="width:100%;padding:16px;font-size:16px">Get My Diagnostic Results →</button>
+      </form>
+
+      <!-- RESULTS SECTION (Hidden until form submitted) -->
+      <div id="resultsSection" style="display:none;margin-top:60px">
+        <div style="background:linear-gradient(135deg,rgba(181,146,76,.12) 0%,rgba(181,146,76,.05) 100%);border:2px solid #d4af37;padding:48px;border-radius:8px">
+          <h2 style="color:#d4af37;font-size:32px;margin-bottom:4px;font-weight:700">Your Automation Opportunity</h2>
+          <p style="color:rgba(245,240,232,.5);margin-bottom:40px;font-size:14px">You're currently leaving money on the table. Here's exactly how much.</p>
+
+          <!-- ANNUAL COST CARD (Big, Prominent) -->
+          <div style="background:rgba(12,27,42,.8);padding:32px;border-radius:6px;margin-bottom:28px;border-left:4px solid #d4af37">
+            <p style="color:rgba(245,240,232,.5);margin-bottom:12px;font-size:13px;letter-spacing:.08em;text-transform:uppercase">Annual Spend on Manual Processes</p>
+            <p style="font-size:48px;font-weight:700;color:#d4af37;margin-bottom:4px" id="annualCost">$104,000</p>
+            <p style="color:rgba(245,240,232,.4);font-size:12px"><span id="annualHours">2,080</span>h of employee time tied up</p>
+          </div>
+
+          <!-- WHAT GETS AUTOMATED -->
+          <h3 style="color:var(--warm);margin-bottom:16px;font-size:18px;font-weight:600">These processes can be automated:</h3>
+          <div id="recommendationsContainer" style="display:grid;gap:10px;margin-bottom:32px"></div>
+
+          <!-- POTENTIAL SAVINGS (Large, Prominent) -->
+          <div style="background:rgba(181,146,76,.15);padding:36px;border-radius:6px;border:2px solid #d4af37;margin-bottom:32px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center">
+              <div>
+                <p style="color:rgba(245,240,232,.5);margin-bottom:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Year 1 Savings (Conservative)</p>
+                <p style="font-size:44px;font-weight:700;color:#d4af37" id="potentialSavings">$52,000</p>
+                <p style="color:rgba(245,240,232,.4);font-size:12px;margin-top:8px">50% of manual time eliminated</p>
+              </div>
+              <div style="border-left:1px solid rgba(181,146,76,.3);padding-left:24px">
+                <p style="color:rgba(245,240,232,.5);margin-bottom:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Investment Required</p>
+                <p style="font-size:32px;font-weight:700;color:var(--warm)" id="investmentRequired">$80,000</p>
+                <p style="color:rgba(245,240,232,.4);font-size:12px;margin-top:8px">Pays for itself in <span id="paybackMonths">1.8</span> months</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROI Comparison -->
+          <div style="background:rgba(12,27,42,.6);padding:24px;border-radius:6px;margin-bottom:32px">
+            <p style="color:rgba(245,240,232,.5);margin-bottom:16px;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Financial Impact</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+              <div>
+                <p style="color:rgba(245,240,232,.4);font-size:12px">Year 1 ROI</p>
+                <p style="font-size:28px;font-weight:700;color:#d4af37" id="roiPercent">65%</p>
+              </div>
+              <div>
+                <p style="color:rgba(245,240,232,.4);font-size:12px">Year 2+ Savings</p>
+                <p style="font-size:28px;font-weight:700;color:#d4af37" id="year2Savings">$52,000</p>
+              </div>
+              <div>
+                <p style="color:rgba(245,240,232,.4);font-size:12px">3-Year Payoff</p>
+                <p style="font-size:28px;font-weight:700;color:#d4af37" id="threeYearReturn">$156,000</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- The Hook: What's the cost of doing nothing -->
+          <div style="background:rgba(181,146,76,.05);padding:24px;border-radius:6px;border-left:4px solid rgba(181,146,76,.5);margin-bottom:32px">
+            <p style="color:rgba(245,240,232,.6);font-size:13px;line-height:1.7">
+              <strong>Next 12 months:</strong> You'll spend <span id="costOfInaction" style="color:#d4af37;font-weight:700">$104,000</span> on these manual processes.
+              At the end of the year, your processes will be exactly as slow, error-prone, and expensive as they are today.
+              The alternative is 3 months to automate them and recover all costs by Q2.
+            </p>
+          </div>
+
+          <!-- FINAL CTA (Strong, Clear) -->
+          <div style="margin-top:48px;text-align:center">
+            <button class="btn btn-primary btn-arrow" onclick="showPage('contact')" style="padding:18px 50px;font-size:17px;margin-bottom:16px;width:100%;">Book Your Free Diagnostic Audit → Recover <span id="ctaSavings">$52K</span>/Year</button>
+            <p style="color:rgba(245,240,232,.4);font-size:12px">30-min call. No commitment. We'll validate exact savings and timeline.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('aiDiagnosticForm');
+    const hoursInput = document.querySelector('input[name="hours"]');
+    const hoursDisplay = document.getElementById('hoursDisplay');
+    const deptCheckboxes = document.querySelectorAll('input[name="dept"]');
+
+    // Update hours display
+    hoursInput.addEventListener('input', (e) => {
+      hoursDisplay.textContent = e.target.value + 'h';
+    });
+
+    // Show/hide process sections based on selected departments
+    deptCheckboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        document.getElementById('financeProcesses').style.display =
+          document.querySelector('input[name="dept"][value="finance"]').checked ? 'block' : 'none';
+        document.getElementById('hrProcesses').style.display =
+          document.querySelector('input[name="dept"][value="hr"]').checked ? 'block' : 'none';
+        document.getElementById('salesProcesses').style.display =
+          document.querySelector('input[name="dept"][value="sales"]').checked ? 'block' : 'none';
+        document.getElementById('supportProcesses').style.display =
+          document.querySelector('input[name="dept"][value="support"]').checked ? 'block' : 'none';
+      });
+    });
+
+    // Form submission
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const hours = parseInt(hoursInput.value);
+      const hourlyRate = parseInt(document.querySelector('input[name="hourlyRate"]').value);
+      const annualHours = hours * 52;
+      const annualCost = annualHours * hourlyRate;
+
+      // Conservative: 50% automation (can be 60-70% in practice)
+      const automationRate = 0.5;
+      const potentialSavings = Math.round(annualCost * automationRate);
+
+      // Investment estimate: $80K-$150K based on complexity
+      // Simplified: base $80K for most cases
+      const investmentRequired = 80000;
+      const paybackMonths = Math.round((investmentRequired / potentialSavings) * 12);
+      const roiYear1 = Math.round(((potentialSavings - investmentRequired) / investmentRequired) * 100);
+      const year2Savings = potentialSavings; // Full year, no investment
+      const threeYearReturn = potentialSavings * 3 - investmentRequired;
+      const ctaSavings = potentialSavings;
+
+      // Update results
+      document.getElementById('annualHours').textContent = annualHours.toLocaleString();
+      document.getElementById('annualCost').textContent = '$' + annualCost.toLocaleString();
+      document.getElementById('potentialSavings').textContent = '$' + potentialSavings.toLocaleString();
+      document.getElementById('investmentRequired').textContent = '$' + investmentRequired.toLocaleString();
+      document.getElementById('paybackMonths').textContent = (paybackMonths / 12).toFixed(1);
+      document.getElementById('roiPercent').textContent = roiYear1 + '%';
+      document.getElementById('year2Savings').textContent = '$' + year2Savings.toLocaleString();
+      document.getElementById('threeYearReturn').textContent = '$' + threeYearReturn.toLocaleString();
+      document.getElementById('costOfInaction').textContent = '$' + annualCost.toLocaleString();
+      document.getElementById('ctaSavings').textContent = '$' + (potentialSavings / 1000).toFixed(0) + 'K';
+
+      // Build recommendations with more detail
+      const processMap = {
+        'invoices': { title: '💰 Invoice Processing', desc: 'Read invoices, validate amounts, route for approval, post to GL — fully automated' },
+        'expenses': { title: '💳 Expense Reports', desc: 'Receipt capture, categorization, compliance check, auto-approval for <$500 — 90% automated' },
+        'reconciliation': { title: '📊 Bank Rec', desc: 'Match transactions, flag discrepancies, generate reports — 85% faster, fewer errors' },
+        'reports': { title: '📈 Financial Reports', desc: 'Automated monthly closes, P&L generation, variance analysis — 6 hours → 30 min' },
+        'onboarding': { title: '🎯 Employee Onboarding', desc: 'System access, paperwork routing, task management — from 3 days to real-time' },
+        'leave': { title: '🗓️ PTO Requests', desc: 'Request submission, policy validation, manager notification, balance updates — instant' },
+        'payroll': { title: '💼 Payroll', desc: 'Time collection, calculation, compliance checks, disbursement — error rate drops to near-zero' },
+        'compliance-hr': { title: '📋 Compliance Docs', desc: 'Policy distribution, acknowledgments, audit trails, retention — fully compliant' },
+        'lead-scoring': { title: '🎯 Lead Scoring', desc: 'Evaluate fit, engagement, budget, timeline — prioritize top 20% automatically' },
+        'followups': { title: '📧 Smart Follow-ups', desc: 'Send at optimal times, personalized messaging, auto-schedule based on signals' },
+        'proposals': { title: '📄 Auto Proposals', desc: 'Template selection, data population, pricing calc, brand formatting — 20 min → 2 min' },
+        'deal-tracking': { title: '📈 Pipeline Mgmt', desc: 'Stage updates, forecast rolls, bottleneck alerts, deal health scoring' },
+        'ticket-routing': { title: '🎟️ Ticket Routing', desc: 'Categorize incoming tickets, assign to right team, escalate urgents — 70% auto-resolution' },
+        'faq-responses': { title: '💬 FAQ Bot', desc: 'Answer 70% of support questions without human touch, route complex to agents' },
+        'escalation': { title: '⬆️ Smart Escalation', desc: 'Identify true urgencies, route to specialists, prevent human bottleneck' },
+        'feedback': { title: '⭐ Feedback Analysis', desc: 'Sentiment scoring, trend identification, actionable insights — real-time dashboards' }
+      };
+
+      const selectedProcesses = Array.from(document.querySelectorAll('input[name="process"]:checked')).map(cb => cb.value);
+      const recommendations = selectedProcesses.map(p => {
+        const proc = processMap[p];
+        return `<div style="padding:16px;background:rgba(181,146,76,.08);border-radius:4px;border-left:3px solid #d4af37">
+          <p style="color:var(--warm);font-weight:600;margin-bottom:4px;font-size:15px">${proc.title}</p>
+          <p style="color:rgba(245,240,232,.6);font-size:13px;line-height:1.6">${proc.desc}</p>
+        </div>`;
+      }).join('');
+
+      document.getElementById('recommendationsContainer').innerHTML = recommendations || '<p style="color:rgba(245,240,232,.6);font-size:14px">Select processes above to see specific automation recommendations</p>';
+
+      // Show results
+      form.style.display = 'none';
+      document.getElementById('resultsSection').style.display = 'block';
+
+      // Scroll to results
+      document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+
+  <footer><div class="footer-inner"><div><div class="foot-name">BulletApex</div></div><div class="foot-col"><h5>Services</h5><a onclick="showPage('ai-sales')">AI Process Automation</a><a onclick="showPage('ai-automation')">Learn More</a></div></div><div class="footer-bottom"><span class="foot-copy">© 2026 BulletApex.</span></div></footer>
+</div>
+
 <!-- ══════════ ARTICLE: AI AUTOMATION #1 ══════════ -->
 <div class="page" id="page-article-ai-1">
   <div class="article-hero">
