@@ -81,6 +81,14 @@
     <priority>0.95</priority>
   </url>
 
+  <!-- AI Sales Page (Highest Priority - Conversion) -->
+  <url>
+    <loc>https://bulletapex.com/#ai-sales</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+  </url>
+
   <!-- AI Automation Article 1 -->
   <url>
     <loc>https://bulletapex.com/#article-ai-1</loc>
