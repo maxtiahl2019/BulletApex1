@@ -73,6 +73,30 @@
     <priority>0.95</priority>
   </url>
 
+  <!-- AI Process Automation (High Priority) -->
+  <url>
+    <loc>https://bulletapex.com/#ai-automation</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- AI Automation Article 1 -->
+  <url>
+    <loc>https://bulletapex.com/#article-ai-1</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- AI Automation Article 2 -->
+  <url>
+    <loc>https://bulletapex.com/#article-ai-2</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Info Pages -->
   <url>
     <loc>https://bulletapex.com/#about</loc>
