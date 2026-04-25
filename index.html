@@ -1142,6 +1142,16 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
           const investmentRequired = 80000;
           const paybackMonths = ((investmentRequired / potentialSavings) * 12).toFixed(1);
 
+          // Track GA4 event
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_submit', {
+              'form_name': 'diagnostic_audit_form',
+              'form_location': 'homepage',
+              'potential_savings': potentialSavings,
+              'payback_months': parseFloat(paybackMonths)
+            });
+          }
+
           // Update results
           document.getElementById('annualHoursHome').textContent = annualHours.toLocaleString();
           document.getElementById('annualCostHome').textContent = '$' + annualCost.toLocaleString();
@@ -3414,6 +3424,18 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
       const threeYearReturn = potentialSavings * 3 - investmentRequired;
       const ctaSavings = potentialSavings;
 
+      // Track GA4 event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+          'form_name': 'diagnostic_audit_form',
+          'form_location': 'diagnostic_page',
+          'annual_cost': annualCost,
+          'potential_savings': potentialSavings,
+          'payback_months': paybackMonths,
+          'roi_year1': roiYear1
+        });
+      }
+
       // Update results
       document.getElementById('annualHours').textContent = annualHours.toLocaleString();
       document.getElementById('annualCost').textContent = '$' + annualCost.toLocaleString();
@@ -4109,6 +4131,17 @@ async function handleFormSubmit(e) {
 
   btn.disabled    = true;
   btn.textContent = 'Sending…';
+
+  // Track GA4 event
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'form_submit', {
+      'form_name': 'contact_enquiry_form',
+      'form_location': 'contact_page',
+      'interest_area': interest,
+      'has_phone': phone ? true : false,
+      'has_telegram': telegram ? true : false
+    });
+  }
 
   const msgText = [
     '🔔 *New BulletApex Inquiry*',
